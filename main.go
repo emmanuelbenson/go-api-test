@@ -39,7 +39,7 @@ func main() {
 	router.HandleFunc("/api", getSlackDetails()).Methods("GET")
 
 	//start server
-	log.Fatal(http.ListenAndServe(":8000", jsonContentTypeMiddleware(router)))
+	log.Fatal(http.ListenAndServe(":3000", jsonContentTypeMiddleware(router)))
 }
 
 func jsonContentTypeMiddleware(next http.Handler) http.Handler {
